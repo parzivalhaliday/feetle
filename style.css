@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'BeaufortforLOL-HeavyItalic';
-    src: url('fonts/BeaufortforLOL-HeavyItalic.woff2') format('woff2');
-}
+
 
 body {
     margin: 0;
@@ -140,18 +137,19 @@ label {
 .guess-suggestions > div {
     border: 2px solid #C89B3C;
     border-radius: 15px;
-    width: 400px;
-    background: linear-gradient(145deg, #6b4f24, #8b6d3a);
+    width: 300px;
+    background: linear-gradient(145deg, #1E282D, #8b6d3a);
     display: flex;
     align-items: center;
     cursor: url('cursor1.png'), auto;
-    margin: 15px auto; /* Ortalama hizalama */
+    margin: 15px auto; 
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.1s ease; 
 }
 
 .guess-suggestions > div:hover {
-    transform: scale(1.05);
+    transform: scale(1.15);
+    background: linear-gradient(145deg, #0c1f25, #ffd080);
 }
 
 .guess-suggestions > div img {
