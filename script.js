@@ -114,6 +114,10 @@ async function guessKontrol() {
             fullScreenGif.id = "full-screen-gif";
             fullScreenGif.src = "defeat.gif";
             fullScreenGif.alt = "Defeat";
+            fullScreenGif.style = "position: relative; z-index: 10";
+            fullScreenGif.style.width = "100%";
+            fullScreenGif.style.height = "100%";
+            
 
             document.body.appendChild(fullScreenGif);
 

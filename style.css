@@ -29,14 +29,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
-    padding: 43px 53px 53px 0;
+    align-items: center;
     width: 600px;
     height: 100vh;
     box-sizing: border-box;
-    overflow: hidden; 
-    padding-bottom: 150px;
-    
+    overflow: hidden;
+    padding-top: 40px;
 }
 
 #image-screen {
@@ -185,7 +183,6 @@ h1 {
 
 #game-over-screen {
     display: none;
-    margin-top: 50px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(94, 17, 17, 0.1);
