@@ -1,10 +1,19 @@
+@font-face {
+    font-family: 'Spiegel TT Regular Italic';
+    src: url('fonts/Spiegel_TT_SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Beaufort for LOL Heavy';
+    src: url('fonts/BeaufortforLOL-Heavy.otf') format('opentype');
+}
 
 
 body {
+    font-family: 'Spiegel TT Regular Italic', sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'BeaufortforLOL-HeavyItalic', sans-serif;
     text-align: center;
     cursor: url('cursor.png'), auto;
     background-image: url('background.png');
@@ -32,7 +41,12 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     padding-top: 40px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.65); 
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    font-family: 'Beaufort for LOL Heavy';
+
 }
+
 
 #image-screen {
     border-radius: 50px;
@@ -46,6 +60,8 @@ body {
 
 #prediction-title {
     margin: 0 auto;
+    font-family: 'Spiegel TT Regular Italic';
+
 }
 
 input[type='image'],
@@ -64,35 +80,36 @@ body, html {
 
 #prediction-label {
     font-weight: bold;
-    color: #C8AA6E;
-    font-size: 38px;
-    font-family: 'Beaufort for LOL', 'Roboto Condensed', sans-serif;
+    color: #C89B3C;
+    font-size: 40px;
+    transform: translate(0px, -20px);
 }
 
 #guess-input-container {
     position: relative;
     display: inline-block;
+    transform: translate(0px, -20px);
+
 }
 
 
 label {
     display: block;
-    text-align: center; /* Etiket içeriğinin ortalanması */
+    text-align: center; 
 }
 
 #guess-input {
     border-radius: 20px;
     border: 3px solid #C89B3C;
     background: #1E282D;
-    width: 500px;
+    width: 400px;
     height: 70px;
-    font-size: 56px;
-    padding: 0px;
-    padding-right: 10px;
+    font-size: 32px;
+    text-align: center;
     box-sizing: border-box;
     display: inline-block;
-    font-family: 'Beaufort for LOL', 'Roboto Condensed';
-    color: #a57231;
+    color: #BAAD94;
+
 }
 
 #guess-et-btn {
@@ -112,44 +129,81 @@ label {
     background-color: #633b07;
 }
 
-#counter, #total-score {
-    font-size: 34px;
+#score-section {
+    position: fixed;
+    bottom: 0;
+    left: 26.2px;
+    transform: translate(-10px, -10px);
     margin: 0 0 16px 36.2px;
-    display: inline-block;
+    text-align: center;
+
+
+}
+
+
+#counter, #scoretxt {
+    font-size: 40px;
     overflow-wrap: break-word;
-    font-family: 'Beaufort for LOL', 'Roboto Condensed';
     font-weight: 900;
     color: #C89B3C;
+    font-family: 'Beaufort for LOL Heavy';
+    transform: translate(0px, -5px);
+    
+
 }
+
+#total-score{
+    font-size: 40px;
+    overflow-wrap: break-word;
+    font-weight: 900;
+    color: #baa;
+    font-family: 'Beaufort for LOL Heavy';
+    transform: translate(0px, -10px);
+}
+
+#scoretxt {
+    margin-bottom: 0px; 
+    
+}
+
+
+
+#total-score {
+    bottom: 50px;
+}
+
 
 #guess-bolumu {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Beaufort for LOL', 'Roboto Condensed';
+    transform: translate(0px, -70px);
 }
 
 .guess-suggestions {
     text-align: center;
+    transform: translate(0px, -85px);
+    
+
 }
 
 .guess-suggestions > div {
     border: 2px solid #C89B3C;
     border-radius: 15px;
-    width: 300px;
-    background: linear-gradient(145deg, #1E282D, #8b6d3a);
+    width: 275px;
+    background: #1E282D;
     display: flex;
     align-items: center;
     cursor: url('cursor1.png'), auto;
-    margin: 15px auto; 
+    margin: 10px auto; 
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, background 0.1s ease; 
 }
 
 .guess-suggestions > div:hover {
     transform: scale(1.15);
-    background: linear-gradient(145deg, #0c1f25, #ffd080);
+    background: linear-gradient(145deg, #1E282D, #ffd080);
     transition: transform 0.3s ease, background 0.1s ease; 
 }
 
@@ -168,13 +222,14 @@ label {
 }
 
 .guess-suggestions > div span {
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 32px;
+    color: #BAAD94;
     flex-grow: 1;
     text-align: left;
     padding: 10px;
     font-weight: bold;
-    text-shadow: 0px 4px 10px rgba(0,0,0,0.65); /* Burada text-shadow özelliğini ekledik */
+    font-family: 'Spiegel TT Regular Italic';
+
 }
 
 
@@ -187,15 +242,15 @@ h1 {
     display: none;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(94, 17, 17, 0.1);
-    background-color: rgba(0, 0, 0, 0.8); /* Arkaplan rengi ekledik */
+    border: 3px solid #C89B3C;
+    background-color:#1E282D; 
     padding: 20px;
     text-align: center;
 }
 
 #game-over-screen h2 {
-    font-size: 44px;
-    color: #360706;
+    font-size: 40px;
+    color: #C89B3C;
 }
 
 #game-over-image {
@@ -217,14 +272,15 @@ h1 {
 
 
 #total-score-text {
-    font-size: 48px; /* Font boyutunu büyüttük */
-    color: #C89B3C; /* Yazı rengini ayarladık */
+    font-size: 40px; 
+    color: #C89B3C;
     margin: 20px 0;
+    
 }
 
 #final-score {
-    font-size: 48px; /* Font boyutunu büyüttük */
-    color: #C89B3C; /* Yazı rengini ayarladık */
+    font-size: 48px; 
+    color: #C89B3C;
     margin: 20px 0;
 }
 

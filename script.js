@@ -108,7 +108,7 @@ async function guessKontrol() {
             document.getElementById("guess-input").style.display = "none";
             document.getElementById("prediction-label").style.display = "none";
             document.getElementById("champion-suggestions").style.display = "none"; // Champion suggestions gizle
-            
+            document.getElementById("scoretxt").style.display = "none";
 
             const fullScreenGif = document.createElement("img");
             fullScreenGif.id = "full-screen-gif";
@@ -135,8 +135,8 @@ async function guessKontrol() {
     }
 
     const remainingAttempts = 3 - counter;
-    document.getElementById("counter").textContent = "Remaining attempts " + remainingAttempts;
-    document.getElementById("total-score").textContent = "Total Score: " + totalScore;
+    document.getElementById("counter").textContent = "REMAINING ATTEMPTS  " + remainingAttempts;
+    document.getElementById("total-score").textContent = "SCORE: " + totalScore;
 
     if (counter >= 3) {
         document.getElementById("guess-input").disabled = true;
