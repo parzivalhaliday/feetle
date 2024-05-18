@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="icons/icon1.ico" type="image/x-icon">
+    <link rel="icon" href="icons/icon1.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="pageTitle">FEETLE</title>
     <link rel="stylesheet" href="style.css" />
@@ -14,7 +14,8 @@
 
       <div id="guess-bolumu">
         <img id="image-screen" alt="Image" /><br />
-        <label for="guess-input" id="prediction-label">YOUR PREDICTION</label><br>
+        <label for="guess-input" id="prediction-label">YOUR PREDICTION</label
+        ><br />
         <div id="guess-input-container">
           <input type="text" id="guess-input" />
           <button id="guess-et-btn">
@@ -35,29 +36,27 @@
 
       <div id="champion-suggestions" class="guess-suggestions"></div>
       <div id="score-section">
-          <div id="counter">REMAINING ATTEMPTS <span class="attempt-number">3</span></div>
-          <div id="scoretxt">SCORE</div>
-          <div id="total-score">0</div>
+        <div id="counter">
+          REMAINING ATTEMPTS <span class="attempt-number">3</span>
+        </div>
+        <div id="scoretxt">SCORE</div>
+        <div id="total-score">0</div>
       </div>
-      
-      
-    
 
-<div id="game-over-screen" style="display: none">
-    <h2 id="game-over-heading">Game Over!</h2>
-    <img id="game-over-image" alt="Champion Image" />
-    <p id="game-over-champion-name"></p>
-    <p id="game-over-score">
-        <span id="total-score-text">Total Score:</span>
-        <span id="final-score">0</span>
-    </p>
-    <p id="tweet-text">Do you want to share on Twitter?</p>
-    <button id="tweet-btn" style="cursor: url('cursor1.png'), auto">
-        Share on Twitter
-    </button>
-</div>
-
-  
+      <div id="game-over-screen" style="display: none">
+        <h2 id="game-over-heading">Game Over!</h2>
+        <img id="game-over-image" alt="Champion Image" />
+        <p id="game-over-champion-name"></p>
+        <p id="game-over-score">
+          <span id="total-score-text">Total Score:</span>
+          <span id="final-score">0</span>
+        </p>
+        <p id="tweet-text">Do you want to share on Twitter?</p>
+        <button id="tweet-btn" style="cursor: url('cursor1.png'), auto">
+          Share on Twitter
+        </button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
     <script src="icontitle.js"></script>
