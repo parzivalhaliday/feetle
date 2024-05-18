@@ -59,7 +59,7 @@ document.getElementById("champion-suggestions").addEventListener("click", functi
 
 document.getElementById("tweet-btn").addEventListener("click", function() {
     const scoreText = document.getElementById("final-score").textContent;
-    const tweetText = `I scored ${scoreText} points in Feet LOL DLE 🎉`;
+    const tweetText = `I scored ${scoreText} points in feetle.lol  🎉`;
     const tweetURL = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
     window.open(tweetURL, "_blank", "width=600,height=300");
 });
@@ -122,6 +122,7 @@ async function guessKontrol() {
             document.body.appendChild(fullScreenGif);
 
             const audio = new Audio('defeat.mp3');
+            audio.volume = 0.1;
             audio.play();
 
             setTimeout(() => {
@@ -138,6 +139,31 @@ async function guessKontrol() {
     document.getElementById("counter").textContent = "REMAINING ATTEMPTS  " + remainingAttempts;
     document.getElementById("total-score").textContent = "SCORE: " + totalScore;
 
+
+    const numberOfImages = Math.floor(Math.random() * 11) + 3;
+    for (let i = 0; i < numberOfImages; i++) {
+        const enemymissImg = document.createElement("img");
+        enemymissImg.src = "enemymiss.png";
+        enemymissImg.style.position = "fixed";
+        enemymissImg.style.left = Math.floor(Math.random() * (window.innerWidth - 50)) + "px";
+        enemymissImg.style.top = Math.floor(Math.random() * (window.innerHeight - 50)) + "px";
+        enemymissImg.style.width = "50px";
+        document.body.appendChild(enemymissImg);
+
+        setTimeout(function() {
+            enemymissImg.remove();
+        }, 1000);
+    }
+
+    for (let i = 0; i < 2; i++) {
+        setTimeout(function() {
+            const audio = new Audio('miss.mp3');
+            audio.volume = 0.2;
+            audio.play();
+        }, i * 1000);
+    }
+
+    
     if (counter >= 3) {
         document.getElementById("guess-input").disabled = true;
     }

@@ -246,6 +246,8 @@ h1 {
     background-color:#1E282D; 
     padding: 20px;
     text-align: center;
+    transform: translate(0px, -30px);
+
 }
 
 #game-over-screen h2 {
