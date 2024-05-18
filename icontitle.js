@@ -15,7 +15,7 @@
             link.href = favicon;
         }
 
-        var basliklar = ["FEETLE","ar u okey?"];
+        var basliklar = ["FEETLE 🦶","FEETLE 🦶🦶","FEETLE 🦶🦶🦶"];
         
         function baslikDegistir() {
             var pageTitle = document.getElementById("pageTitle");
@@ -24,4 +24,4 @@
         }
 
         // Belirli aralıklarla başlığı değiştir
-        setInterval(baslikDegistir, 10000);
+        setInterval(baslikDegistir, 1000);
