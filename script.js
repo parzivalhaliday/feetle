@@ -208,3 +208,30 @@ function filtrele() {
         sampiyonListesi.appendChild(div);
     });
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var redBox = document.getElementById('info-box');
+    var modal = document.getElementById('modal');
+    var closeButton = document.getElementById('close-button');
+    var modalClose = document.getElementById('modal-close');
+
+    redBox.addEventListener('click', function () {
+        modal.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', function () {
+        modal.style.display = 'block';
+    });
+
+    modalClose.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
