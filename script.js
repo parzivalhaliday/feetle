@@ -137,7 +137,7 @@ async function guessKontrol() {
 
     const remainingAttempts = 3 - counter;
     document.getElementById("counter").textContent = "REMAINING ATTEMPTS  " + remainingAttempts;
-    document.getElementById("total-score").textContent = "SCORE: " + totalScore;
+    document.getElementById("total-score").textContent = " " + totalScore;
 
 
     const numberOfImages = Math.floor(Math.random() * 11) + 3;
