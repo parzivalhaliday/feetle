@@ -90,6 +90,8 @@ async function guessKontrol() {
         if (totalScore === MAX_AYAK_SAYISI) {
             alert("ayak uzmanı");
         }
+        // Doğru tahmin yapıldığında ses çalma ve resim göstermeme
+        return;
     } else {
         counter++;
         if (counter === 3) {
@@ -132,6 +134,10 @@ async function guessKontrol() {
                 }
                 audio.pause();
             }, 3000);
+        } else {
+            const audio = new Audio('miss.mp3');
+            audio.volume = 0.2;
+            audio.play();
         }
     }
 
@@ -170,6 +176,7 @@ async function guessKontrol() {
 
     document.getElementById("guess-input").value = "";
 }
+
 
 
 
