@@ -87,13 +87,10 @@ async function guessKontrol() {
         totalScore++;
         const MAX_AYAK_SAYISI = 303;
         if (totalScore === MAX_AYAK_SAYISI) {
-            alert("ayak uzmanı");
+            alert("FEET GOD");
         }
-        // Skoru güncelle
         document.getElementById("total-score").textContent = totalScore;
-        // Yeni resme geç
         await yeniResmeGec();
-        // Doğru tahmin yapıldığında ses çalma ve resim göstermeme
         return;
     } else {
         counter++;
@@ -143,7 +140,6 @@ async function guessKontrol() {
 
     const remainingAttempts = 3 - counter;
     document.getElementById("counter").textContent = "REMAINING ATTEMPTS  " + remainingAttempts;
-    // Eğer skor güncellemesi buraya kadar bekliyorsa, burada da güncelleme yapılabilir
     document.getElementById("total-score").textContent = " " + totalScore;
 
     const numberOfImages = Math.floor(Math.random() * 11) + 3;
