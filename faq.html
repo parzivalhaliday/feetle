@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/icon1.ico" type="image/x-icon" />
+    <script src="icontitle.js"></script>
+    <title>FEETLE FAQ</title>
+</head>
+<body>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+        body {
+            color: #fff; /* Text color */
+            background: #121212; /* Background color */
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .faq-header {
+            font-size: 42px;
+            border-bottom: 1px dotted #ccc;
+            padding: 24px;
+        }
+
+        .faq-content {
+            margin: 0 auto;
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .panel-title {
+            font-size: 24px;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 10px 10px 0 48px;
+            display: block;
+            cursor: pointer;
+            color: #fff; /* Text color */
+        }
+
+        .panel-content {
+            font-size: 20px;
+            padding: 0px 14px;
+            margin: 0 40px;
+            height: 0;
+            overflow: hidden;
+            z-index: -1;
+            position: relative;
+            opacity: 0;
+            -webkit-transition: .4s ease;
+            -moz-transition: .4s ease;
+            -o-transition: .4s ease;
+            transition: .4s ease;
+            color: #fff; /* Text color */
+        }
+
+        .panel:checked ~ .panel-content {
+            height: auto;
+            opacity: 1;
+            padding: 14px;
+        }
+
+        .plus {
+            position: absolute;
+            margin-left: 20px;
+            margin-top: 4px;
+            z-index: 5;
+            font-size: 42px;
+            line-height: 100%;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            -webkit-transition: .2s ease;
+            -moz-transition: .2s ease;
+            -o-transition: .2s ease;
+            transition: .2s ease;
+            color: #fff; /* Text color */
+        }
+
+        .panel:checked ~ .plus {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .panel {
+            display: none;
+        }
+    </style>
+    <div class="faq-header">Frequently Asked Questions</div>
+
+    <div class="faq-content">
+        <div class="faq-question">
+            <input id="q1" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q1" class="panel-title">Are you a foot fetishist/pervert?</label>
+            <div class="panel-content">Nah</div>
+        </div>
+
+        <div class="faq-content">
+            <div class="faq-question">
+                <input id="q2" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q2" class="panel-title">Why does this site?</label>
+                <div class="panel-content">Riot Games has been bringing a lot of champions and skins lately that pay attention to feet (example briar, fairy court lux)</div>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-question">
+                    <input id="q3" type="checkbox" class="panel">
+                    <div class="plus">+</div>
+                    <label for="q3" class="panel-title">It could have had a better interface.</label>
+                    <div class="panel-content">I'm not a fr🤮ntend  developer.</div>
+                </div>
+
+                <div class="faq-content">
+                    <div class="faq-question">
+                        <input id="q4" type="checkbox" class="panel">
+                        <div class="plus">+</div>
+                        <label for="q4" class="panel-title">How long have you been playing League of Legends?</label>
+                        <div class="panel-content">I've been playing since the end of Season 1, so around 12-13 years</div>
+                    </div>
+                </div>
+</body>
+</html>
