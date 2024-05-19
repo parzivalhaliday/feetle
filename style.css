@@ -230,7 +230,7 @@ h1 {
   background-color: #1e282d;
   padding: 20px;
   text-align: center;
-  transform: translate(0px, -30px);
+  transform: translate(0px, -120px);
 }
 
 #game-over-screen h2 {
