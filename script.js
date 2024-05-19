@@ -85,11 +85,14 @@ async function guessKontrol() {
     const guess = document.getElementById("guess-input").value;
     if (guess.toLowerCase() === rastgeleKlasor.champname.toLowerCase()) {
         totalScore++;
-        await yeniResmeGec();
         const MAX_AYAK_SAYISI = 303;
         if (totalScore === MAX_AYAK_SAYISI) {
             alert("ayak uzmanı");
         }
+        // Skoru güncelle
+        document.getElementById("total-score").textContent = totalScore;
+        // Yeni resme geç
+        await yeniResmeGec();
         // Doğru tahmin yapıldığında ses çalma ve resim göstermeme
         return;
     } else {
@@ -97,12 +100,10 @@ async function guessKontrol() {
         if (counter === 3) {
             document.getElementById("game-over-screen").style.display = "block";
             document.getElementById("final-score").textContent = totalScore;
-            
             // Oyun bittiğinde rastgele seçilen karakterin resmini ve adını göster
             const imageURL = `tiles/${rastgeleKlasor.champname}.png`;
             document.getElementById("game-over-image").src = imageURL;
             document.getElementById("game-over-champion-name").textContent = rastgeleKlasor.champname;
-            
             // Gizlenecek elementleri belirleyelim
             document.getElementById("guess-et-btn").style.display = "none";
             document.getElementById("counter").style.display = "none";
@@ -119,7 +120,6 @@ async function guessKontrol() {
             fullScreenGif.style = "position: relative; z-index: 10";
             fullScreenGif.style.width = "100%";
             fullScreenGif.style.height = "100%";
-            
 
             document.body.appendChild(fullScreenGif);
 
@@ -143,8 +143,8 @@ async function guessKontrol() {
 
     const remainingAttempts = 3 - counter;
     document.getElementById("counter").textContent = "REMAINING ATTEMPTS  " + remainingAttempts;
+    // Eğer skor güncellemesi buraya kadar bekliyorsa, burada da güncelleme yapılabilir
     document.getElementById("total-score").textContent = " " + totalScore;
-
 
     const numberOfImages = Math.floor(Math.random() * 11) + 3;
     for (let i = 0; i < numberOfImages; i++) {
@@ -169,13 +169,13 @@ async function guessKontrol() {
         }, i * 1000);
     }
 
-    
     if (counter >= 3) {
         document.getElementById("guess-input").disabled = true;
     }
 
     document.getElementById("guess-input").value = "";
 }
+
 
 
 
