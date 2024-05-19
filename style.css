@@ -328,14 +328,12 @@ h1 {
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
-  
-  
-  
+
 }
 
 .modal-content a{
   cursor: url("cursor1.png"), auto;
-color: #42aaaa;
+color: #351392;
   
   
 }
@@ -368,11 +366,14 @@ color: #42aaaa;
   display: inline-block;
   vertical-align: middle;
 }
+
+
 .social-buttons img {
   width: 52px;
   height: 52px;
   cursor: url("cursor1.png"), auto;
 }
+
 
 .social-buttons a {
   cursor: url("cursor1.png"), auto;
