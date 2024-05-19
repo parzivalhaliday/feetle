@@ -465,3 +465,26 @@ color: #351392;
     font-size: 24px;
   }
 }
+
+
+#retry-btn {
+  background-color: #07b124;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#retry-btn:hover {
+  background-color: #51b663;
+}
+
+#retry-text {
+  color: #07b124;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+

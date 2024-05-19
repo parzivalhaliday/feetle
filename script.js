@@ -135,7 +135,6 @@ async function guessKontrol() {
                 audio.pause();
             }, 3000);
         } else {
-            
             const audio = new Audio('miss.mp3');
             audio.volume = 0.2;
             audio.play();
@@ -177,6 +176,7 @@ async function guessKontrol() {
 
     document.getElementById("guess-input").value = "";
 }
+
 
 
 
@@ -243,4 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.style.display = 'none';
         }
     });
+});
+document.getElementById("retry-btn").addEventListener("click", function() {
+    location.reload();
 });
