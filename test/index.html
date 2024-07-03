@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="FEETLE - Foot knowledge challenge for league players." />
+    <meta name="keywords" content="FEETLE, League of Legends, guessing game, champions" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="icons/icon1.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">FEETLE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+
+    <div class="ad-banner left-ad-banner">
+      <a href="https://store.steampowered.com/app/2693930/Dice__Fold/">
+        <img src="image.png" alt="Left Ad" />
+      </a>
+    </div>
+    <div class="ad-banner right-ad-banner">
+      <a href="https://store.steampowered.com/app/2693930/Dice__Fold/">
+        <img src="image.png" alt="Right Ad" />
+      </a>
+    </div>
+    <div id="all">
+      <div class="info-box" id="info-box">
+        <span class="close-button" id="close-button">&times;</span>
+      </div>
+      <h1 id="prediction-title">FEETLE</h1>
+      <br />
+
+      <div id="guess-bolumu">
+        <img id="image-screen" alt="Image" /><br />
+        <label for="guess-input" id="prediction-label">YOUR PREDICTION</label
+        ><br />
+        <div id="guess-input-container">
+          <input type="text" id="guess-input" />
+          <button id="guess-et-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              viewBox="0 0 490 490"
+            >
+              <polygon
+                fill="#000000"
+                points="240.112,0 481.861,245.004 240.112,490 8.139,490 250.29,245.004 8.139,0 "
+              ></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="champion-suggestions" class="guess-suggestions"></div>
+      <div id="score-section">
+        <div id="counter">
+          REMAINING ATTEMPTS <span class="attempt-number">3</span>
+        </div>
+        <div id="scoretxt">SCORE</div>
+        <div id="total-score">0</div>
+      </div>
+
+      <div id="game-over-screen" style="display: none">
+        <h2 id="game-over-heading">Game Over !</h2>
+        <img id="game-over-image" alt="Champion Image" />
+        <p id="game-over-champion-name"></p>
+        <p id="game-over-score">
+          <span id="total-score-text">Total Score:</span>
+          <span id="final-score">0</span>
+        </p>
+        <p id="tweet-text">Do you want to share on Twitter?</p>
+        <button id="tweet-btn" style="cursor: url('cursor1.png'), auto">
+          Share on Twitter
+        </button>
+        <p id="retry-text">Would you like to play again?</p>
+        <button id="retry-btn">Play Again</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" id="modal-close"></span>
+        <p><strong>Disclaimer</strong></p>
+        <p>
+          Disclaimer: feetle.lol is not endorsed by Riot Games nor does it
+          reflect their views, opinions, or those of anyone officially involved
+          in League of Legends' production and/or management.
+        </p>
+        <br />
+        <p>
+          Greatly inspired by these cool games:
+          <a href="https://loldle.net/" target="_blank">Loldle</a> ,<a
+            href="https://www.nytimes.com/games/wordle/index.htmls"
+            target="_blank"
+            >Worldle</a
+          >
+        </p>
+
+        <p><strong>Feedback / Questions</strong></p>
+        <p>
+          Please check the
+          <a href="https://feetle.lol/faq" target="_blank">FAQ</a> first.
+        </p>
+        <!-- <p><strong>Thanks for designing the UI, Falael!</strong><br /></p> -->
+        <p><strong>Thanks!</strong> kn0!</p>
+        <div class="social-buttons">
+          <a href="https://parzi.lol" target="_blank">
+            <img src="icons/portfolio.png" alt="Twitter" />
+          </a>
+          <a href="https://www.twitter.com/parzivalhaliday" target="_blank">
+            <img src="icons/twitter.png" alt="Twitter" />
+          </a>
+          <a href="https://www.instagram.com/parzivalhaliday" target="_blank">
+            <img src="icons/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.youtube.com/@parzivalhaliday" target="_blank">
+            <img src="icons/youtube.png" alt="YouTube" />
+          </a>
+        </div>
+        <p>
+          If you'd like to support the game, you can
+          <a href="https://buymeacoffee.com/parzivalhaliday" target="_blank"
+            >buy me a coffee ☕</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="icontitle.js"></script>
+  </body>
+</html>
