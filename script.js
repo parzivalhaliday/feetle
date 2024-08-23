@@ -94,7 +94,7 @@ async function guessKontrol() {
         return;
     } else {
         counter++;
-        if (counter === 1113) {
+        if (counter === 3) {
             document.getElementById("game-over-screen").style.display = "block";
             document.getElementById("final-score").textContent = totalScore;
             // Oyun bittiğinde rastgele seçilen karakterin resmini ve adını göster
@@ -132,7 +132,7 @@ async function guessKontrol() {
                 audio.pause();
             }, 3000);
         } else {
-            const audio = new Audio('miss1.mp3');
+            const audio = new Audio('miss.mp3');
             audio.volume = 0.2;
             audio.play();
         }
