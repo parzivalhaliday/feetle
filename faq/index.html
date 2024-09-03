@@ -95,6 +95,38 @@
         .panel {
             display: none;
         }
+
+        .highlight {
+            white-space: nowrap; /* Tailwind ve TypeScript'in birlikte kalması için */
+        }
+
+        /* Hover efekt için stil */
+        .hidden-tech {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .etc:hover + .hidden-tech {
+            display: block;
+        }
+
+        .etc {
+            text-decoration: underline;
+            cursor: pointer;
+            color: red;
+        }
+
+        /* Gizli içeriğin metni için */
+        .hidden-tech span {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
     </style>
     <div class="faq-header">Frequently Asked Questions</div>
 
@@ -111,7 +143,7 @@
                 <input id="q2" type="checkbox" class="panel">
                 <div class="plus">+</div>
                 <label for="q2" class="panel-title">Why did you make this site?</label>
-                <div class="panel-content">Riot Games has been bringing a lot of champions and skins lately that pay attention to feet (example briar, fairy court lux)</div>
+                <div class="panel-content">Riot Games has been bringing a lot of champions and skins lately that pay attention to feet (example Briar, Fairy Court Lux)</div>
             </div>
 
             <div class="faq-content">
@@ -121,7 +153,6 @@
                     <label for="q3" class="panel-title">It could have had a better interface.</label>
                     <div class="panel-content">I'm not a fr🤮ntend  developer.</div>
                 </div>
-
                 <div class="faq-content">
                     <div class="faq-question">
                         <input id="q4" type="checkbox" class="panel">
@@ -129,6 +160,18 @@
                         <label for="q4" class="panel-title">How long have you been playing League of Legends?</label>
                         <div class="panel-content">I've been playing since the end of Season 1, so around 12-13 years</div>
                     </div>
-                </div>
+                    <div class="faq-question">
+                        <input id="q5" type="checkbox" class="panel">
+                        <div class="plus">+</div>
+                        <label for="q5" class="panel-title">
+                            Why don't you use things like <span class="highlight">Tailwind, TypeScript,  for CSS and JS?</span> 
+                            <span class="etc">etc.</span>
+                            <div class="hidden-tech">
+                                <span>Vue, React, Angular, SASS, Less, Bootstrap, jQuery, Ember, Backbone, Knockout, Foundation, Materialize, Bulma, Semantic-UI, Webpack, Parcel, Gulp, Grunt, PostCSS, CoffeeScript, Preact, HAML, Ulkit, Mustache, XSLT, NPM libs, Lit, Ionic, Express, Nuxt, Polymer, Meteor, HandleBars, Gatsby, Underscore, CSS-in-JS</span>
+                            </div>
+                        </label>
+                        <div class="panel-content">Just use pure JS/CSS.</div>
+                    </div>
+                    
 </body>
 </html>
