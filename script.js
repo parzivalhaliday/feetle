@@ -90,6 +90,7 @@ async function guessKontrol() {
             alert("FEET GOD");
         }
         document.getElementById("total-score").textContent = totalScore;
+        document.getElementById("guess-input").value = ""; 
         await yeniResmeGec();
         return;
     } else {
@@ -133,7 +134,7 @@ async function guessKontrol() {
             }, 3000);
         } else {
             const audio = new Audio('miss.mp3');
-            audio.volume = 0.2;
+            audio.volume = 0.1;
             audio.play();
         }
     }
