@@ -1,4 +1,4 @@
-const championDataURL = "https://ddragon.leagueoflegends.com/cdn/14.9.1/data/en_US/champion.json";
+const championDataURL = "https://ddragon.leagueoflegends.com/cdn/14.17.1/data/en_US/champion.json";
 let counter = 0;
 let totalScore = 0;
 let sampiyonlar;
@@ -217,30 +217,30 @@ function filtrele() {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    var redBox = document.getElementById('info-box');
-    var modal = document.getElementById('modal');
-    var closeButton = document.getElementById('close-button');
-    var modalClose = document.getElementById('modal-close');
+        document.addEventListener('DOMContentLoaded', function () {
+            var redBox = document.getElementById('info-box');
+            var modal = document.getElementById('modal');
+            var closeButton = document.getElementById('close-button');
+            var modalClose = document.getElementById('modal-close');
 
-    redBox.addEventListener('click', function () {
-        modal.style.display = 'block';
-    });
+            redBox.addEventListener('click', function () {
+                modal.style.display = 'block';
+            });
 
-    closeButton.addEventListener('click', function () {
-        modal.style.display = 'block';
-    });
+            closeButton.addEventListener('click', function () {
+                modal.style.display = 'block';
+            });
 
-    modalClose.addEventListener('click', function () {
-        modal.style.display = 'none';
-    });
+            modalClose.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
 
-    window.addEventListener('click', function (event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-document.getElementById("retry-btn").addEventListener("click", function() {
-    location.reload();
-});
+            window.addEventListener('click', function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+        document.getElementById("retry-btn").addEventListener("click", function() {
+            location.reload();
+        });
